@@ -28,9 +28,13 @@ int main()
     obj.getValue1();
     obj.getOperator();
 
-    while (obj.op)
+    if (obj.op == '=')
     {
-        if(obj.op == '=')
+        cout << "\nTotal : " << obj.c;
+    }
+    else
+    {
+        while (obj.op != '=')
         {
             obj.getValue2();
 
