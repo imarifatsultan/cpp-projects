@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-class temp
+class calculator
 {
 public:
     int a, b, c;
@@ -25,12 +25,13 @@ int main()
     cout << "(*) For Multiplication\n";
     cout << "(/) For Division\n";
     cout << "(=) Total\n\n";
+
     obj.getValue1();
     obj.getOperator();
 
     if (obj.op == '=')
     {
-        cout << "\nTotal : " << obj.c;
+        cout << "\nTotal : " << obj.a; 
     }
     else
     {
@@ -53,57 +54,56 @@ int main()
                 obj.divide();
                 break;
             default:
-                cout << "Invalid Operator chosen;" << endl;
+                cout << "Invalid Operator chosen!" << endl;
                 break;
             }
+            obj.getOperator(); 
         }
+        cout << "\nTotal : " << obj.c << endl; 
     }
     return 0;
 }
 
-void temp::getValue1()
+void calculator::getValue1()
 {
     cout << "Enter the value :: ";
     cin >> a;
+    c = a; 
 }
 
-void temp::getValue2()
+void calculator::getValue2()
 {
     cout << "Enter the value :: ";
     cin >> b;
 }
 
-void temp::getOperator()
+void calculator::getOperator()
 {
     cout << "Enter the Operator :: ";
     cin >> op;
 }
 
-void temp::add()
+void calculator::add()
 {
     c = a + b;
-    cout << a << "+" << b << " :: " << c;
-    a = c;
-    b = 0;
-}
+    cout << a << " + " << b << " = " << c << endl;
+    a = c; 
 
-void temp::subtract()
+void calculator::subtract()
 {
     c = a - b;
-    cout << a << " - " << b << " :: " << c;
+    cout << a << " - " << b << " = " << c << endl;
     a = c;
-    b = 0;
 }
 
-void temp::multiply()
+void calculator::multiply()
 {
     c = a * b;
-    cout << a << " * " << b << " :: " << c;
+    cout << a << " * " << b << " = " << c << endl;
     a = c;
-    b = 0;
 }
 
-void temp::divide()
+void calculator::divide()
 {
     if (b == 0)
     {
@@ -112,8 +112,7 @@ void temp::divide()
     else
     {
         c = a / b;
-        cout << a << " / " << b << " :: " << c << endl;
+        cout << a << " / " << b << " = " << c << endl;
         a = c;
-        b = 0;
     }
 }
