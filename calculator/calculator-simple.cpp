@@ -11,7 +11,7 @@ public:
     void getValue2();
     void getOperator();
 
-    void add();
+    void addition();
     void subtract();
     void multiply();
     void divide();
@@ -42,7 +42,7 @@ int main()
             switch (obj.op)
             {
             case '+':
-                obj.add();
+                obj.addition();
                 break;
             case '-':
                 obj.subtract();
@@ -83,7 +83,7 @@ void calculator::getOperator()
     cin >> op;
 }
 
-void calculator::add()
+void calculator::addition()
 {
     c = a + b;
     cout << a << " + " << b << " = " << c << endl;
