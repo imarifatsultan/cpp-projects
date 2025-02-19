@@ -1,3 +1,5 @@
+// Simple program to calculate multiplication talbe of a choosen number
+
 #include <iostream>
 using namespace std;
 
