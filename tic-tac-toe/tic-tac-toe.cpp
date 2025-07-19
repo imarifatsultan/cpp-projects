@@ -81,11 +81,3 @@ int main() {
 
     return 0;
 }
-
-// Note ! The code while writeing is compatibel with the following version and distribution of c++ compiler
-
-/*
-g++ version
-C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find version: No such file or directory
-collect2.exe: error: ld returned 1 exit status
-*/
